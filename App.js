@@ -3,14 +3,29 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import  MaterialCommunityIcons  from 'react-native-vector-icons/MaterialCommunityIcons';
 import Home from './src/Localizacao';
 import Cadatrar from './src/Cadatrar';
-import {useState} from "react";
-
+import Treino from './src/Treino';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'; 
+import Inicio from './src/Inicio';
+import Login from './src/Login';
+import { useState } from 'react';
+import Cadastro from './src/Cadastro';
 
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
 
+
+  const[ logado, setLogado ] = useState( false );
+  const[ cadastro, setCadastro ] = useState( false );
+
+  if( !logado ) {
+    return( <Login setLogado={setLogado} setCadastro={setCadastro}/> )
+  }
+
+  if( cadastro ) {
+    return( <Cadastro setCadastro={setCadastro} setLogado={setLogado} /> )
+  }
 
   return (
     <NavigationContainer>
@@ -36,17 +51,25 @@ export default function App() {
        ),
       }}/>
       <Tab.Screen
-      name='Cadatrar'
-      component={Cadatrar} 
+      name='Treino'
+      component={Treino} 
       options={{
-          tabBarLabel: 'Cadatrar',
+          tabBarLabel: 'Treino',
           tabBarIconStyle: {color: "white"},
           tabBarIcon: ({color, size}) => (
        <MaterialCommunityIcons name="arm-flex" color={color} size={size} />
        ),
       }}/>
-       
-     
+      <Tab.Screen
+      name='Cadatrar'
+      component={Cadatrar} 
+      options={{
+          tabBarLabel: 'Cadastrar',
+          tabBarIconStyle: {color: "white"},
+          tabBarIcon: ({color, size}) => (
+       <MaterialCommunityIcons name="create" color={color} size={size} />
+       ),
+      }}/>      
       </Tab.Navigator>
     </NavigationContainer>
   );
