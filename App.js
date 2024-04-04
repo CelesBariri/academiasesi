@@ -3,14 +3,26 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import  MaterialCommunityIcons  from 'react-native-vector-icons/MaterialCommunityIcons';
 import Home from './src/Home';
 import Treino from './src/Treino';
-import {useState} from "react";
-
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'; 
+import Inicio from './src/Inicio';
+import Login from './src/Login';
+import { useState } from 'react';
+import Cadastro from './src/Cadastro';
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
 
+  const[ logado, setLogado ] = useState( false );
+  const[ cadastro, setCadastro ] = useState( false );
+
+  if( !logado ) {
+    return( <Login setLogado={setLogado} setCadastro={setCadastro}/> )
+  }
+
+  if( cadastro ) {
+    return( <Cadastro setCadastro={setCadastro} setLogado={setLogado} /> )
+  }
 
   return (
     <NavigationContainer>
@@ -45,8 +57,7 @@ export default function App() {
        <MaterialCommunityIcons name="arm-flex" color={color} size={size} />
        ),
       }}/>
-       
-     
+
       </Tab.Navigator>
     </NavigationContainer>
   );
