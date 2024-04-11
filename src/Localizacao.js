@@ -1,11 +1,12 @@
-import { StyleSheet, View, Image, TextInput } from "react-native";
+import { StyleSheet, View, Image, TextInput, Text } from "react-native";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Header from "../components/Header";
 
 export default function Localizacao()
 {
     return(
         <View>
-        <Image style={css.img} styles source={require("./../assets/Sesi.png")} /> 
+        <Header/> 
         <View style={css.barra}>
             <TextInput style={css.pesquisa} placeholder="Pesquisar"> 
             </TextInput>
@@ -37,7 +38,7 @@ const css = StyleSheet.create({
         width: 270,
         height: 40,
         marginLeft: "15%",
-        marginTop: 25,
+        marginTop: 210,
         borderWidth: 2,
     },
     pesquisa: {

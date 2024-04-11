@@ -14,7 +14,8 @@ const css = StyleSheet.create({
     height: 180,
     position: "absolute",
     top: 0,
-    left: 0
+    left: 0,
+    zIndex: 1
   },
   logo: {
     width: "92%",
@@ -22,5 +23,4 @@ const css = StyleSheet.create({
     position: "relative",
     resizeMode: "cover"
   }
-
 })

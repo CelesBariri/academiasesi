@@ -1,5 +1,5 @@
 import { Image, StyleSheet, Text, View,ScrollView } from "react-native";
-import Header2 from "../components/Header2";
+import Header from "../components/Header2";
 
 
 export default function Inicio()
@@ -7,7 +7,7 @@ export default function Inicio()
     return(
         <View style={css.container}>   
         <ScrollView>           
-            <Header2/>
+            <Header/>
                 <View style={css.perfilBox}>
                     <View style={css.item}>               
                         <Image style={css.itemImg} source={require("./../assets/reanto.png")}/>
@@ -26,7 +26,8 @@ export default function Inicio()
                  </View>          
                  <Text style={css.texto3}>Progressão de Carga</Text>
                 <Image style={css.img2} source={require("./../assets/grafico.png")}/>
-                <Text style={css.texto4}>ㅤSegㅤㅤ Terㅤㅤ Quaㅤㅤ Quiㅤㅤ Sex</Text>                
+                <Text style={css.texto4}>ㅤSegㅤㅤ Terㅤㅤ Quaㅤㅤ Quiㅤㅤ Sex</Text>
+                <View style={css.fim}></View>
             </ScrollView>
         </View>       
     )
@@ -129,4 +130,7 @@ const css = StyleSheet.create({
         fontWeight: "bold",
         
     },
+    fim:{
+        height:30
+    }
 })

@@ -1,13 +1,31 @@
+import { useState } from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import Treino from "./Treino";
+import Superiores from "./Superiores";
+import Header from "../components/Header";
 
 export default function Cadatrar() {
+    const[ treino, setTreino] = useState(false);
+    const[ superiores, setSuperiores] = useState(false);
+
+
+    if (treino)
+    {
+        return(<Treino setTreino = {setTreino}/>)
+    }
+
+    if (superiores)
+    {
+        return(<Superiores setSuperiores = {setSuperiores}/>)
+    }
+    
     return (
         <View>
-            <Image style={css.img} styles source={require("./../assets/Sesi.png")} />
-            <View style={css.quadrado}>
+            <Header/>
+            <View style={css.quadrado1}>
                 <Text style={css.text}>Treino 1</Text>
                 <Text style={css.font}>Inferiores</Text>
-                <Text style={css.fent}>Quadrceps</Text>
+                <Text style={css.fent}>Quadriceps</Text>
                 <View style={css.flex}>
                     <TouchableOpacity style={css.butao}>
                         <Text style={css.btntext}>Historico</Text>
@@ -16,7 +34,7 @@ export default function Cadatrar() {
                         <Text style={css.btntext2}>Evolução</Text>
                     </TouchableOpacity>
                 </View>
-                <TouchableOpacity style={css.butao3}>
+                <TouchableOpacity style={css.butao3} onPress={()=> setTreino(true)}>
                         <Text style={css.btntext3}>Ver Treino</Text>
                     </TouchableOpacity>
             </View>
@@ -32,7 +50,7 @@ export default function Cadatrar() {
                         <Text style={css.btntext2}>Evolução</Text>
                     </TouchableOpacity>
                 </View>
-                <TouchableOpacity style={css.butao3}>
+                <TouchableOpacity style={css.butao3} onPress={()=> setSuperiores(true)}>
                         <Text style={css.btntext3}>Ver Treino</Text>
                     </TouchableOpacity>
             </View>
@@ -54,11 +72,18 @@ const css = StyleSheet.create({
         height: 200,
         bordercolor: "black",
         borderWidth: 2,
-        marginTop: 60,
+        marginTop: 70,
         marginLeft: 21,
         borderRadius: 10,
-
-
+    },
+    quadrado1: {
+        width: 350,
+        height: 200,
+        bordercolor: "black",
+        borderWidth: 2,
+        marginTop: 230,
+        marginLeft: 21,
+        borderRadius: 10,
     },
     text: {
         marginLeft: 15,

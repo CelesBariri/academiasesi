@@ -1,33 +1,6 @@
-import { Text, TextInput, TouchableHighlight, TouchableOpacity, View } from "react-native";
-
-export default function Cadastro()
-{
-    function Cadastrar() {
-        setCadastro(false);
-        setCadastro(false);
-
-    }
-    
-    function Voltar() {
-
-    }
-    return(
-        <View>
-            <TextInput />
-            <TextInput />
-            <TouchableOpacity onPress={Cadastrar}>
-                <Text>Cadastrar</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={Voltar}>
-                <Text>Login</Text>
-            </TouchableOpacity>
-        </View>
-    )
-}
-
+import { Text, TextInput, TouchableHighlight, TouchableOpacity, View, StyleSheet, ScrollView } from "react-native";
 import React from 'react'
 import { useState } from "react";
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import Header from '../components/Header';
 
 export default function Cadastro({ setLogado, setCadastro, setCpf }) {

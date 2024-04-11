@@ -6,46 +6,46 @@ import Header from "../components/Header";
 const exercicios = [
     {
         id: 1,
-        Exercicio: "Leg Press",
+        Exercicio: "Remada Curvada",
         Carga: "100%",
         Series: "4/12",
         Intervalo: "60s",
-        Imagem: require("../assets/leg.png")
+        Imagem: require("../assets/remada2.png")
     },
     {
         id: 2,
-        Exercicio: "stiff",
+        Exercicio: "Remada Maquina",
         Carga: "70%",
         Series: "4/12",
         Intervalo: "70", 
-        Imagem: require("../assets/stiff.png")
+        Imagem: require("../assets/remada.png")
        
     },
     {
         id: 3,
-        Exercicio: "Passada",
+        Exercicio: "Supino",
         Carga: "100%",
         Series: "4/6",
         Intervalo: "120", 
-        Imagem: require("../assets/Passada.png")
+        Imagem: require("../assets/supino.png")
        
     }
 ]
 
 
-export default function Treino({ navigation, setTreino })
+export default function Treino({ navigation, setSuperiores })
 {
     return(
         <View style={css.container}>
             <Header/>
-            <Text style={css.nome}>Inferiores</Text>
+            <Text style={css.nome}>Superiores</Text>
             <FlatList
                 data={exercicios}
                 renderItem={({ item }) => <Exercicios Exercicio={item.Exercicio} Series={item.Series} Imagem={item.Imagem}  Intervalo={item.Intervalo} Carga={item.Carga}/>}
                 keyExtracor={(item) => item.id}
             />
             <TouchableOpacity style={css.btn}>
-                    <Text style={css.btnText} onPress={()=> setTreino(false)}>Voltar</Text>
+                    <Text style={css.btnText} onPress={()=> setSuperiores(false)}>Voltar</Text>
                 </TouchableOpacity>
 
         </View>
@@ -72,7 +72,7 @@ const css = StyleSheet.create({
         fontWeight: "bold",
         padding: 20,
         marginTop: 200,
-
+        color: "black"
     },
     btn: {
         width: '91%',
