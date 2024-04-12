@@ -7,20 +7,15 @@ export default function Header() {
     </View>
   )
 }
-
 const css = StyleSheet.create({
   header: {
     width: "100%",
-    height: 180,
-    position: "absolute",
-    top: 0,
-    left: 0,
-    zIndex: 1
+    marginTop: 0,
+    height: 160,
   },
   logo: {
-    width: "92%",
+    width: "95%",
     height: "100%",
-    position: "relative",
-    resizeMode: "cover"
+    marginLeft:0
   }
 })

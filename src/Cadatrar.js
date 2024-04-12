@@ -20,8 +20,9 @@ export default function Cadatrar() {
     }
     
     return (
-        <View>
+        <View style={css.a}>
             <Header/>
+            <View style={css.pai}>
             <View style={css.quadrado1}>
                 <Text style={css.text}>Treino 1</Text>
                 <Text style={css.font}>Inferiores</Text>
@@ -56,33 +57,27 @@ export default function Cadatrar() {
             </View>
             
         </View>
+        </View>
     )
 }
 const css = StyleSheet.create({
-    img: {
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "28%",
-        zIndex: -1,
-
+    pai: {
+        marginLeft: 25
     },
     quadrado: {
         width: 350,
-        height: 200,
+        height: 205,
         bordercolor: "black",
         borderWidth: 2,
-        marginTop: 70,
-        marginLeft: 21,
+        marginTop: 50,
         borderRadius: 10,
     },
     quadrado1: {
         width: 350,
-        height: 200,
+        height: 205,
         bordercolor: "black",
         borderWidth: 2,
-        marginTop: 230,
-        marginLeft: 21,
+        marginTop: 270,
         borderRadius: 10,
     },
     text: {

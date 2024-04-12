@@ -1,18 +1,18 @@
 import { Image, StyleSheet, Text, View,ScrollView } from "react-native";
-import Header from "../components/Header2";
+//import Header from "../components/Header2";
 
 
 export default function Inicio()
 { 
     return(
-        <View style={css.container}>   
-        <ScrollView>           
-            <Header/>
+        <View style={css.container}>          
+            <ScrollView>  
+                <Image style={css.iasa} source={require("./../assets/Sesi.png")}/>
                 <View style={css.perfilBox}>
                     <View style={css.item}>               
                         <Image style={css.itemImg} source={require("./../assets/reanto.png")}/>
                         <View style={css.caxa}>
-                        <Text style={css.itemText}>Bem vindo,<Text style={css.itemText1}> Aquiles!</Text></Text>
+                            <Text style={css.itemText}>Bem vindo,<Text style={css.itemText1}> Aquiles!</Text></Text>
                         </View>
                     </View>
                     <View style={css.item}>
@@ -22,9 +22,9 @@ export default function Inicio()
                 </View>
                 <Text style={css.texto2}>Seu desempenho diario</Text>
                 <View style={css.caxa2}>
-                <Image style={css.img1} source={require("./../assets/efodane.png")}/> 
+                    <Image style={css.img1} source={require("./../assets/efodane.png")}/> 
                  </View>          
-                 <Text style={css.texto3}>Progressão de Carga</Text>
+                <Text style={css.texto3}>Progressão de Carga</Text>
                 <Image style={css.img2} source={require("./../assets/grafico.png")}/>
                 <Text style={css.texto4}>ㅤSegㅤㅤ Terㅤㅤ Quaㅤㅤ Quiㅤㅤ Sex</Text>
                 <View style={css.fim}></View>
@@ -38,11 +38,10 @@ const css = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         height: "100%",
-        width: "100%"
-        
+        width: "100%"        
     },
     perfilBox: {
-        width: "87%",
+        width: "95%",
         height: 230,
         borderWidth: 2,
         borderColor: "red",
@@ -50,33 +49,28 @@ const css = StyleSheet.create({
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-around",
-        marginTop: 210,
-        marginLeft: 8
+        marginTop: 10,
     },
     item: {
-        width: "34%",
+        width: "70%",
         height: 250,
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
-        
+        alignItems: "center",        
     },
     itemImg: {
         width: "100%",
         height: 140,
-        resizeMode: "contain",
-        marginLeft: 10
-        
-       
+        resizeMode: "contain",              
     },
     itemText: {
-        fontSize: 15,
+        fontSize: 12,
         fontWeight: "bold"
     },
     texto2: {
         paddingLeft: 200,
-        paddingTop: 459,
-        fontSize: 17,
+        paddingTop: 539,
+        fontSize: 15,
         fontWeight: "bold",
         position: "absolute"
     },
@@ -87,7 +81,7 @@ const css = StyleSheet.create({
         width: 600,
     },
     img1: {
-        marginTop: 59,
+        marginTop: 119,
         height: 260,
         resizeMode: "stretch",
     },
@@ -132,5 +126,11 @@ const css = StyleSheet.create({
     },
     fim:{
         height:30
+    },
+    iasa: {
+        height: 220,
+        width: 432,
+        resizeMode: "stretch",
+        marginLeft: -20
     }
 })

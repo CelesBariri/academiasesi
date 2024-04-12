@@ -68,7 +68,7 @@ const css = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'black',
         padding: 5,
-        marginTop: 15,
+        marginTop: 35,
         marginBottom: 20,
         padding: 15
     },
@@ -102,7 +102,7 @@ const css = StyleSheet.create({
         fontSize: 30,
         fontWeight: "bold",
         color: "red",
-        marginBottom: 30
+        marginTop: 50
     },
     btnCadastroText: {
         color: "blue"

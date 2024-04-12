@@ -71,7 +71,7 @@ const css = StyleSheet.create({
         fontSize: 30,
         fontWeight: "bold",
         padding: 20,
-        marginTop: 200,
+        marginTop: 230,
 
     },
     btn: {

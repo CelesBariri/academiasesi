@@ -11,7 +11,7 @@ export default function Header() {
 const css = StyleSheet.create({
   header: {
     width: "100%",
-    height: 180,
+    height: 230,
     position: "absolute",
     top: 0,
     left: 0

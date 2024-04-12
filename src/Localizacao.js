@@ -27,18 +27,18 @@ const css = StyleSheet.create({
 
     },
     imagem: {
-        height: 400,
-        width: 400,
+        height: 380,
+        width: "100%",
         resizeMode: "stretch",
-        marginLeft: 0,
-        marginTop: 40
+        marginLeft: 5,
+        marginTop: 5
     },
     barra: {
         borderRadius: 8,
         width: 270,
         height: 40,
         marginLeft: "15%",
-        marginTop: 210,
+        marginTop: 270,
         borderWidth: 2,
     },
     pesquisa: {
